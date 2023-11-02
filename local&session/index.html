@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local/SessionStorage</title>
+</head>
+<body>
+    <form>
+        <label for="selectStorageType">Tároló típusa</label>
+        <select id="selectStorageType">
+            <option value="-">-</option>
+            <option value="LocalStorage">LocalStorage</option>
+            <option value="SessionStorage">SessionStorage</option>
+        </select>
+        <label for="key">Kulcs:</label>
+        <input type="text" id="key">
+        <label for="key">Érték:</label>
+        <input type="text" id="value">
+        <button type="submit">Mentés</button>
+    </form>
+    <button onclick="DeleteLocalStorage()">LocalStorage törlés</button>
+    <button onclick="DeleteSessionStorage()">SessonStorage törlés</button>
+    <div class="localstorage">
+        <p>Localstorage:</p>
+        <ul class="locallist"></ul>
+    </div>
+    <div class="sessionstorage">
+        <div>SessionStorage:</div>
+        <ul class="sessionlist"></ul>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
